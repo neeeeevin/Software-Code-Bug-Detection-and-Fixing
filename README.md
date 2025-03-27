@@ -74,3 +74,45 @@ This system follows a modular architecture that includes:
 
 🚀 **Try it now and enhance your debugging workflow!**
 
+
+
+SCREENSHOTS:
+
+![interface](https://github.com/user-attachments/assets/2a8517f4-2105-4e54-b690-e6cbbe344548)
+
+
+![code_entered](https://github.com/user-attachments/assets/51b092f1-d715-4f50-88d4-0a0abdaa1f56)
+
+
+
+
+
+
+
+
+![processing](https://github.com/user-attachments/assets/7d2f98c6-5e37-4d03-95f1-5cb2c3bb9c9a)
+
+
+
+
+
+![displays_input](https://github.com/user-attachments/assets/c2371231-0fdb-4a21-bd3f-d1cf98333958)
+
+
+
+
+![corrected_code](https://github.com/user-attachments/assets/21e5e725-cf47-4395-9d29-a6417a9ecfa6)
+
+
+![EXPLANATION (2)](https://github.com/user-attachments/assets/fca94983-d16c-4965-b86b-a0404b5b6037)
+
+
+![graphical_data](https://github.com/user-attachments/assets/e44a5359-6432-42e8-a1db-ce6388b8ba3e)
+
+
+
+
+
+
+
+
