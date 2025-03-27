@@ -1,6 +1,0 @@
-torch
-transformers
-gradio
-plotly
-pandas
-cachetools
