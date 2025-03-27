@@ -47,10 +47,11 @@ This system follows a modular architecture that includes:
 ## 🚀 Getting Started
 ### Installation
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/software-bug-detection.git
-   cd software-bug-detection
+   
+   git clone https://github.com/neeeeevin/.Software-Code-Bug-Detection-and-Fixing.git
+   cd Software-Code-Bug-Detection-and-Fixing
    ```
+
 2. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
