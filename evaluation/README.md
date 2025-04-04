@@ -1,11 +1,16 @@
+📊 Bug Visualization Module
+Easily visualize the frequency of different types of bugs detected in Python code using this helper function.
+
 🚀 Usage
-
 1️⃣ Import the Visualization Function
-
+python
+Copy
+Edit
 from bug_visualization import generate_bug_visualization
-
 2️⃣ Example Usage
-
+python
+Copy
+Edit
 error_counts = {
     "Syntax Error": 3,
     "Type Error": 2,
@@ -14,48 +19,22 @@ error_counts = {
 
 fig = generate_bug_visualization(error_counts)
 fig.show()
+✅ Example Output
+The function generates a bar chart like the one below:
 
-3️⃣ Example Output
-The script generates a bar chart like this:
-📊 Bug Type Frequency (Detected Errors)
-
-
-
-
-
-
-
-+-------------------+---------------+
-| Bug Type         | Occurrences   |
-+-------------------+---------------+
-| Syntax Error     | 3             |
-| Type Error      | 2             |
-| ZeroDivision Error | 1             |
-+-------------------+---------------+
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Bug Type	Occurrences
+Syntax Error	3
+Type Error	2
+ZeroDivision Error	1
+📈 Each error type is displayed with its frequency, making it easy to understand the nature of issues in the code.
 
 📌 Handling No Errors
-If no errors are detected, the function returns an empty chart labeled "No Errors Detected."
+If no errors are detected (error_counts is empty), the function automatically returns a placeholder chart labeled "No Errors" to prevent rendering issues.
 
 🛠️ How It Works
-Converts the error_counts dictionary into a Pandas DataFrame
+Converts the error_counts dictionary into a Pandas DataFrame.
 
-Uses Plotly Express (px.bar) to create a bar chart
+Uses Plotly Express (px.bar) to create a clean, interactive bar chart.
 
-Automatically adjusts chart labels and titles
+Automatically configures chart labels, titles, and themes for readability.
+
