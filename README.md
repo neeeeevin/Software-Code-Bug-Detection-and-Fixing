@@ -82,7 +82,7 @@ SCREENSHOTS:
 ![interface](https://github.com/neeeeevin/Software-Code-Bug-Detection-and-Fixing/blob/41ff27bf6233786868e6936fa10fb892294fc766/Output%20Screenshots/userinput.jpg)
 
 
-![code_entered](https://github.com/user-attachments/assets/51b092f1-d715-4f50-88d4-0a0abdaa1f56)
+![code_entered](https://github.com/neeeeevin/Software-Code-Bug-Detection-and-Fixing/blob/5c5009e3d12fc33676c79f440b7def03987ccb9f/Output%20Screenshots/Output.jpg)
 
 
 
@@ -91,29 +91,4 @@ SCREENSHOTS:
 
 
 
-![processing](https://github.com/user-attachments/assets/7d2f98c6-5e37-4d03-95f1-5cb2c3bb9c9a)
-
-
-
-
-
-![displays_input](https://github.com/user-attachments/assets/c2371231-0fdb-4a21-bd3f-d1cf98333958)
-
-
-
-
-![corrected_code](https://github.com/user-attachments/assets/21e5e725-cf47-4395-9d29-a6417a9ecfa6)
-
-
-![EXPLANATION (2)](https://github.com/user-attachments/assets/fca94983-d16c-4965-b86b-a0404b5b6037)
-
-
-![graphical_data](https://github.com/user-attachments/assets/e44a5359-6432-42e8-a1db-ce6388b8ba3e)
-
-
-
-
-
-
-
-
+![processing](https://github.com/neeeeevin/Software-Code-Bug-Detection-and-Fixing/blob/5c5009e3d12fc33676c79f440b7def03987ccb9f/Output%20Screenshots/Errors%20Frequency.jpg)
