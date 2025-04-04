@@ -14,7 +14,7 @@ def load_model():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
-        torch_dtype=torch.float32,  # Ensure CPU compatibility
+        torch_dtype=torch.float16 if device == "cuda" else torch.float32,
     ).to(device)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     return model, tokenizer, device
@@ -24,7 +24,7 @@ model, tokenizer, device = load_model()
 
 # LRU Cache Implementation
 class LRUCache:
-    def _init_(self, capacity: int):
+    def __init__(self, capacity: int):  
         self.cache = OrderedDict()
         self.capacity = capacity
     
@@ -49,14 +49,12 @@ def debug_code(input_text):
     cached_result = lru_cache.get(input_text)
     if cached_result:
         return cached_result
-    
+
     try:
-        # Preprocess input
-        messages = [
-            {"role": "system", "content": "You are an AI-powered code debugging assistant."},
-            {"role": "user", "content": input_text}
-        ]
-        text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        # Manually format the chat message (replaces apply_chat_template)
+        text = f"<|im_start|>system\nYou are an AI-powered code debugging assistant.<|im_end|>\n" \
+               f"<|im_start|>user\n{input_text}<|im_end|>\n<|im_start|>assistant\n"
+        
         model_inputs = tokenizer([text], return_tensors="pt").to(device)
 
         with torch.no_grad():
@@ -64,13 +62,13 @@ def debug_code(input_text):
 
         generated_tokens = generated_ids[0][model_inputs.input_ids.size(1):]
         output = tokenizer.decode(generated_tokens, skip_special_tokens=True)
-        
+
         # Detect Errors
         error_counts = detect_errors(output)
 
         # Store in cache
         lru_cache.put(input_text, (output, error_counts))
-        
+
         return output, error_counts
     except Exception as e:
         return f"Error in debugging: {str(e)}", {}
@@ -92,10 +90,8 @@ def detect_errors(debug_output):
         "ModuleNotFound Error": r"module\s?not\s?found\s?error|ModuleNotFoundError",
         "Value Error": r"value\s?error|ValueError",
     }
-    
+
     error_counts = defaultdict(int)
-    
-    # Convert output to lowercase for better error detection
     debug_output_lower = debug_output.lower()
 
     for error_type, pattern in error_patterns.items():
@@ -107,7 +103,6 @@ def detect_errors(debug_output):
 def generate_bug_visualization(error_counts):
     """Generates a bar chart for detected errors."""
     if not error_counts:
-        # Ensure at least an empty plot is returned to avoid rendering issues
         df = pd.DataFrame({"Bug Type": ["No Errors"], "Occurrences": [0]})
     else:
         df = pd.DataFrame(list(error_counts.items()), columns=["Bug Type", "Occurrences"])
@@ -120,7 +115,7 @@ def generate_bug_visualization(error_counts):
         color="Bug Type",
         text_auto=True
     )
-    
+
     fig.update_layout(
         xaxis_title="Error Type",
         yaxis_title="Number of Occurrences",
@@ -132,22 +127,23 @@ def generate_bug_visualization(error_counts):
 
 # Gradio UI
 with gr.Blocks() as demo:
-    gr.Markdown("# AI Bug Detector  \n### Enter Python code below to debug.")
-    
+    gr.Markdown("# 🐞 AI Bug Detector  \n### Paste your Python code below to get a debug report.")
+
     with gr.Row():
-        code_input = gr.Code(label="Enter Your Code", language="python", lines=10)
-        debug_button = gr.Button("Debug Code", variant="primary")
-    
+        code_input = gr.Code(label="Your Python Code", language="python", lines=12)
+        debug_button = gr.Button("🔍 Debug Code", variant="primary")
+
     with gr.Row():
         output_box = gr.Textbox(label="Debugging Output", lines=15, interactive=False)
-    
+
     bug_chart = gr.Plot(label="Bug Type Analysis")
-    
+
     def process_code(input_text):
         debug_output, error_counts = debug_code(input_text)
         return debug_output, generate_bug_visualization(error_counts)
-    
+
     debug_button.click(fn=process_code, inputs=code_input, outputs=[output_box, bug_chart])
 
-if _name_ == "_main_":
+
+if __name__ == "__main__":
     demo.launch(share=True)
