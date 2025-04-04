@@ -40,6 +40,17 @@ print(error_counts)
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 🛠️ How It Works
 🔍 Error Detection
 The script scans debugging logs for common Python errors using regex patterns.
