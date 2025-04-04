@@ -1,5 +1,5 @@
 ![download](https://github.com/user-attachments/assets/f992bfbd-d50e-4a1c-98e3-ef3530550d6b)
-Python  Code Bug Detection & Fixing 
+##Python  Code Bug Detection & Fixing ##
 
  Overview
 This project is an **AI-powered debugging tool** that analyzes Python code for errors and provides insightful debugging suggestions. It utilizes the **Qwen2.5-Coder-1.5B-Instruct** model for detecting syntax, logic, and runtime errors, offering an interactive **Gradio UI** for real-time debugging and visualization.
