@@ -79,7 +79,7 @@ This system follows a modular architecture that includes:
 
 SCREENSHOTS:
 
-![interface](https://github.com/user-attachments/assets/2a8517f4-2105-4e54-b690-e6cbbe344548)
+![interface](Output Screenshots/Errors Frequency.jpg)
 
 
 ![code_entered](https://github.com/user-attachments/assets/51b092f1-d715-4f50-88d4-0a0abdaa1f56)
