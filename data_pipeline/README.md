@@ -10,19 +10,9 @@ This script (`datacollection.py`) extracts **error types from debugging output**
 ✅ **Counts occurrences of different error types**  
 ✅ **Stores results in a dictionary for further analysis**  
 
----
 
-## 🛠️ Installation  
 
-### 🔹 Step 1: Clone the Repository  
-```bash
-git clone https://github.com/neeeeevin/Software-Code-Bug-Detection-and-Fixing.git
-cd Software-Code-Bug-Detection-and-Fixing
-
-🔹 Step 2: Install Dependencies
-pip install -r requirements.txt
-
-🚀 Usage
+ Usage
 
 1️⃣ Import the Script
 
