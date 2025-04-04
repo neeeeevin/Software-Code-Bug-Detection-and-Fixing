@@ -24,7 +24,7 @@ model, tokenizer, device = load_model()
 
 # LRU Cache Implementation
 class LRUCache:
-    def __init__(self, capacity: int):  
+    def __init__(self, capacity: int): 
         self.cache = OrderedDict()
         self.capacity = capacity
     
@@ -127,7 +127,7 @@ def generate_bug_visualization(error_counts):
 
 # Gradio UI
 with gr.Blocks() as demo:
-    gr.Markdown("# 🐞 AI Bug Detector  \n### Paste your Python code below to get a debug report.")
+    gr.Markdown("#  AI Bug Detector  \n### Paste your Python code below to get a debug report.")
 
     with gr.Row():
         code_input = gr.Code(label="Your Python Code", language="python", lines=12)
