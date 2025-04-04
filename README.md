@@ -79,7 +79,7 @@ This system follows a modular architecture that includes:
 
 SCREENSHOTS:
 
-![interface](Output Screenshots/Errors Frequency.jpg)
+![interface](https://github.com/neeeeevin/Software-Code-Bug-Detection-and-Fixing/blob/41ff27bf6233786868e6936fa10fb892294fc766/Output%20Screenshots/userinput.jpg)
 
 
 ![code_entered](https://github.com/user-attachments/assets/51b092f1-d715-4f50-88d4-0a0abdaa1f56)
