@@ -9,5 +9,4 @@ This directory contains the trained AI models and related scripts for the **Soft
 - **Caching Mechanism**: Implements LRU caching for efficient debugging.  
 
 
-License
-This project is licensed under the MIT License.
+
