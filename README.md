@@ -43,12 +43,10 @@ This system follows a modular architecture that includes:
 - **Deployment Scripts**: Automates model loading and debugging execution.
 - **Docker Support**: Can be containerized for cloud-based deployment.
 
+**Getting Started**
+**Installation**
 
 ```
-
-** Getting Started
-** Installation
-
 1. **Clone the repository**:
    
    git clone https://github.com/neeeeevin/.Software-Code-Bug-Detection-and-Fixing.git
