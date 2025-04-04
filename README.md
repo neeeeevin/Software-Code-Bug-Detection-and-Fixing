@@ -39,9 +39,10 @@ This system follows a modular architecture that includes:
 
 
 ## Integration & Deployment
-- **Hugging Face Space**: [Check out the live demo here!](<https://huggingface.co/spaces/neviiiiii/fixyourbugs>)
+- **Hugging Face Space**: [Check out the live demo here!](<https://huggingface.co/spaces/neviiiiii/fixyourbugs>) ( a free platform where hosting using a minimal cpu takes place .so it may take more time for response. manually running is recommended ]
+  
 - **Deployment Scripts**: Automates model loading and debugging execution.
-- **Docker Support**: Can be containerized for cloud-based deployment.
+
 
 **Getting Started**
 **Installation**
@@ -60,12 +61,9 @@ This system follows a modular architecture that includes:
    ```bash
    python app.py
    ```
-[ dont forget the requirements ]
+   
+[ dont forget the requirements ] [ also try using it in a cuda supported system with gpu for faster response or else it may take too long to respond using a CPU ]
 
-##  Future Enhancements
-- Add support for debugging additional programming languages.
-- Implement real-time debugging suggestions with auto-fix options.
-- Optimize performance with more efficient model quantization techniques.
 
 ---
 ###  Note: Execution Time Variations
@@ -73,7 +71,7 @@ This system follows a modular architecture that includes:
 - **Local CPU Execution**: Slower than GPU, but functional for basic debugging.
 - **Local GPU Execution**: Offers the best performance for real-time debugging.
 
- **Try it now and enhance your debugging workflow!**
+ **Try it now!**
 
 
 
